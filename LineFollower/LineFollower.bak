@@ -169,12 +169,12 @@ $EndComp
 $Comp
 L +9V #PWR?
 U 1 1 58C1B2A1
-P 7600 1050
-F 0 "#PWR?" H 7600 900 50  0001 C CNN
-F 1 "+9V" H 7600 1190 50  0000 C CNN
-F 2 "" H 7600 1050 50  0000 C CNN
-F 3 "" H 7600 1050 50  0000 C CNN
-	1    7600 1050
+P 7650 1050
+F 0 "#PWR?" H 7650 900 50  0001 C CNN
+F 1 "+9V" H 7650 1190 50  0000 C CNN
+F 2 "" H 7650 1050 50  0000 C CNN
+F 3 "" H 7650 1050 50  0000 C CNN
+	1    7650 1050
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -588,6 +588,259 @@ Text Label 5400 5300 0    60   ~ 0
 SE7
 Text Label 5400 5500 0    60   ~ 0
 SE8
+Entry Wire Line
+	5300 5200 5400 5300
+Text Label 5400 5400 0    60   ~ 0
+MUX
+$Comp
+L GND #PWR?
+U 1 1 58C5ECFB
+P 5550 6100
+F 0 "#PWR?" H 5550 5850 50  0001 C CNN
+F 1 "GND" H 5550 5950 50  0000 C CNN
+F 2 "" H 5550 6100 50  0000 C CNN
+F 3 "" H 5550 6100 50  0000 C CNN
+	1    5550 6100
+	1    0    0    -1  
+$EndComp
+Entry Wire Line
+	5300 5300 5400 5400
+Entry Wire Line
+	5300 5400 5400 5500
+Entry Wire Line
+	5300 5500 5400 5600
+Text Label 6500 5700 0    60   ~ 0
+MUXA
+Text Label 6500 5800 0    60   ~ 0
+MUXB
+Text Label 6500 5900 0    60   ~ 0
+MUXC
+$Comp
+L HCF4051 MUX1
+U 1 1 58C60585
+P 6100 5550
+F 0 "MUX1" H 6100 5100 60  0000 C CNN
+F 1 "HCF4051" H 6100 6000 60  0000 C CNN
+F 2 "" H 6100 5550 60  0001 C CNN
+F 3 "http://si.farnell.com/stmicroelectronics/hcf4051bey/ic-4000-cmos-4051-dip16-15v/dp/9755551" H 6100 5000 60  0001 C CNN
+	1    6100 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR?
+U 1 1 58C61124
+P 6650 4950
+F 0 "#PWR?" H 6650 4800 50  0001 C CNN
+F 1 "+5V" H 6650 5090 50  0000 C CNN
+F 2 "" H 6650 4950 50  0000 C CNN
+F 3 "" H 6650 4950 50  0000 C CNN
+	1    6650 4950
+	1    0    0    -1  
+$EndComp
+Entry Bus Bus
+	6750 4450 6850 4550
+Entry Bus Bus
+	5200 4450 5300 4550
+Entry Wire Line
+	4750 3100 4850 3200
+Entry Wire Line
+	4750 3550 4850 3650
+Entry Wire Line
+	4750 3700 4850 3800
+Text Label 4850 3200 0    60   ~ 0
+MUXA
+Text Label 4850 3650 0    60   ~ 0
+MUXB
+Text Label 4850 3800 0    60   ~ 0
+MUXC
+Entry Wire Line
+	7700 3350 7800 3450
+Text Label 7500 3350 0    60   ~ 0
+MUX
+Text Notes 1000 650  0    60   ~ 0
+SENZORJI ZA ČRTO
+Text Notes 5850 950  0    60   ~ 0
+MIKROKONTROLER
+Text Notes 8900 3600 0    60   ~ 0
+DRIVER, ENKODERJA IN MOTORJA
+Text Notes 5800 5000 0    60   ~ 0
+MULTIPLEKSER
+Entry Wire Line
+	7700 3800 7800 3900
+Text Label 7450 3800 0    60   ~ 0
+SEON
+$Comp
+L Battery_Cell BT1
+U 1 1 58C69BCF
+P 750 6800
+F 0 "BT1" H 850 6900 50  0000 L CNN
+F 1 "Battery_Cell" H 850 6800 50  0000 L CNN
+F 2 "" V 750 6860 50  0000 C CNN
+F 3 "" V 750 6860 50  0000 C CNN
+	1    750  6800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Stikalo ST?
+U 1 1 58C69DEF
+P 2050 6850
+F 0 "ST?" H 2050 6650 60  0000 C CNN
+F 1 "Stikalo" H 2050 7050 60  0000 C CNN
+F 2 "" H 1900 6650 60  0001 C CNN
+F 3 "" H 1900 6650 60  0001 C CNN
+	1    2050 6850
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 58C6B716
+P 1450 7000
+F 0 "#PWR?" H 1450 6750 50  0001 C CNN
+F 1 "GND" H 1450 6850 50  0000 C CNN
+F 2 "" H 1450 7000 50  0000 C CNN
+F 3 "" H 1450 7000 50  0000 C CNN
+	1    1450 7000
+	1    0    0    -1  
+$EndComp
+$Comp
+L R 10kΩ
+U 1 1 58C6BF0C
+P 2700 6750
+F 0 "10kΩ" V 2780 6750 50  0000 C CNN
+F 1 "R12" V 2700 6750 50  0000 C CNN
+F 2 "" V 2630 6750 50  0000 C CNN
+F 3 "" H 2700 6750 50  0000 C CNN
+	1    2700 6750
+	-1   0    0    1   
+$EndComp
+$Comp
+L Q_PMOS_GDS Q1
+U 1 1 58C6F55F
+P 3100 6900
+F 0 "Q1" H 3300 6950 50  0000 L CNN
+F 1 "Q_PMOS_GDS" H 3300 6850 50  0000 L CNN
+F 2 "" H 3300 7000 50  0000 C CNN
+F 3 "" H 3100 6900 50  0000 C CNN
+	1    3100 6900
+	1    0    0    1   
+$EndComp
+$Comp
+L +9V #PWR?
+U 1 1 58C6FF4A
+P 4000 6650
+F 0 "#PWR?" H 4000 6500 50  0001 C CNN
+F 1 "+9V" H 4000 6790 50  0000 C CNN
+F 2 "" H 4000 6650 50  0000 C CNN
+F 3 "" H 4000 6650 50  0000 C CNN
+	1    4000 6650
+	1    0    0    -1  
+$EndComp
+$Comp
+L R 10kΩ
+U 1 1 58C7011E
+P 4000 6900
+F 0 "10kΩ" V 4080 6900 50  0000 C CNN
+F 1 "R13" V 4000 6900 50  0000 C CNN
+F 2 "" V 3930 6900 50  0000 C CNN
+F 3 "" H 4000 6900 50  0000 C CNN
+	1    4000 6900
+	1    0    0    -1  
+$EndComp
+$Comp
+L R 10kΩ
+U 1 1 58C701A7
+P 4000 7300
+F 0 "10kΩ" V 4080 7300 50  0000 C CNN
+F 1 "R14" V 4000 7300 50  0000 C CNN
+F 2 "" V 3930 7300 50  0000 C CNN
+F 3 "" H 4000 7300 50  0000 C CNN
+	1    4000 7300
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 58C70511
+P 4000 7500
+F 0 "#PWR?" H 4000 7250 50  0001 C CNN
+F 1 "GND" H 4000 7350 50  0000 C CNN
+F 2 "" H 4000 7500 50  0000 C CNN
+F 3 "" H 4000 7500 50  0000 C CNN
+	1    4000 7500
+	1    0    0    -1  
+$EndComp
+Entry Bus Bus
+	4550 6250 4650 6350
+Entry Wire Line
+	4550 7100 4650 7200
+Text Label 4400 7100 0    60   ~ 0
+BAT
+Entry Wire Line
+	7700 3200 7800 3300
+Text Label 7550 3200 0    60   ~ 0
+BAT
+$Comp
+L RN42-(Bluetooth_module) BTM1
+U 1 1 58C75ACA
+P 10350 1700
+F 0 "BTM1" H 10350 2450 60  0000 C CNN
+F 1 "RN42-(Bluetooth_module)" H 10350 2700 60  0000 C CNN
+F 2 "" H 10300 1150 60  0001 C CNN
+F 3 "http://si.farnell.com/microchip/rn42-i-rm/module-bluetooth-class-2-w-ant/dp/2143310" H 10350 2850 60  0001 C CNN
+	1    10350 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L TXB0108PWR-(Voltage_level_translator) VLT1
+U 1 1 58C76B2F
+P 8800 1450
+F 0 "VLT1" H 8800 1900 60  0000 C CNN
+F 1 "TXB0108PWR-(Voltage_level_translator)" H 8800 2300 60  0000 C CNN
+F 2 "" H 8850 850 60  0001 C CNN
+F 3 "http://si.farnell.com/texas-instruments/txb0108pwr/ic-translator-8bit-bidirectional/dp/1494945" H 8800 2200 60  0001 C CNN
+	1    8800 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 58C77F0E
+P 9150 2700
+F 0 "#PWR?" H 9150 2450 50  0001 C CNN
+F 1 "GND" H 9150 2550 50  0000 C CNN
+F 2 "" H 9150 2700 50  0000 C CNN
+F 3 "" H 9150 2700 50  0000 C CNN
+	1    9150 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3.3V #PWR?
+U 1 1 58C78C35
+P 9550 850
+F 0 "#PWR?" H 9550 700 50  0001 C CNN
+F 1 "+3.3V" H 9550 990 50  0000 C CNN
+F 2 "" H 9550 850 50  0000 C CNN
+F 3 "" H 9550 850 50  0000 C CNN
+	1    9550 850 
+	1    0    0    -1  
+$EndComp
+Entry Wire Line
+	7700 2900 7800 3000
+Entry Wire Line
+	7700 3050 7800 3150
+Text Label 7550 3050 0    60   ~ 0
+BTX
+Text Label 7550 2900 0    60   ~ 0
+BRX
+$Comp
+L +5V #PWR?
+U 1 1 58C7BF38
+P 9350 850
+F 0 "#PWR?" H 9350 700 50  0001 C CNN
+F 1 "+5V" H 9350 990 50  0000 C CNN
+F 2 "" H 9350 850 50  0000 C CNN
+F 3 "" H 9350 850 50  0000 C CNN
+	1    9350 850 
+	1    0    0    -1  
+$EndComp
 Wire Wire Line
 	8350 5200 8600 5200
 Wire Wire Line
@@ -849,9 +1102,9 @@ Wire Bus Line
 Wire Bus Line
 	7800 800  4750 800 
 Wire Wire Line
-	7150 1700 7600 1700
+	7150 1700 7650 1700
 Wire Wire Line
-	7600 1700 7600 1050
+	7650 1700 7650 1050
 Wire Bus Line
 	4550 1000 4650 1000
 Wire Wire Line
@@ -957,44 +1210,6 @@ Wire Wire Line
 	5200 4100 5200 2150
 Wire Wire Line
 	5200 2150 5400 2150
-Entry Wire Line
-	5300 5200 5400 5300
-Text Label 5400 5400 0    60   ~ 0
-MUX
-$Comp
-L GND #PWR?
-U 1 1 58C5ECFB
-P 5550 6100
-F 0 "#PWR?" H 5550 5850 50  0001 C CNN
-F 1 "GND" H 5550 5950 50  0000 C CNN
-F 2 "" H 5550 6100 50  0000 C CNN
-F 3 "" H 5550 6100 50  0000 C CNN
-	1    5550 6100
-	1    0    0    -1  
-$EndComp
-Entry Wire Line
-	5300 5300 5400 5400
-Entry Wire Line
-	5300 5400 5400 5500
-Entry Wire Line
-	5300 5500 5400 5600
-Text Label 6500 5700 0    60   ~ 0
-MUXA
-Text Label 6500 5800 0    60   ~ 0
-MUXB
-Text Label 6500 5900 0    60   ~ 0
-MUXC
-$Comp
-L HCF4051 MUX1
-U 1 1 58C60585
-P 6100 5550
-F 0 "MUX1" H 6100 5100 60  0000 C CNN
-F 1 "HCF4051" H 6100 6000 60  0000 C CNN
-F 2 "" H 6100 5550 60  0001 C CNN
-F 3 "http://si.farnell.com/stmicroelectronics/hcf4051bey/ic-4000-cmos-4051-dip16-15v/dp/9755551" H 6100 5000 60  0001 C CNN
-	1    6100 5550
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	5700 5800 5550 5800
 Wire Wire Line
@@ -1006,22 +1221,9 @@ Wire Wire Line
 	6500 5200 6650 5200
 Wire Wire Line
 	6650 5200 6650 4950
-$Comp
-L +5V #PWR?
-U 1 1 58C61124
-P 6650 4950
-F 0 "#PWR?" H 6650 4800 50  0001 C CNN
-F 1 "+5V" H 6650 5090 50  0000 C CNN
-F 2 "" H 6650 4950 50  0000 C CNN
-F 3 "" H 6650 4950 50  0000 C CNN
-	1    6650 4950
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	5700 5700 5550 5700
 Connection ~ 5550 5800
-Entry Bus Bus
-	6750 4450 6850 4550
 Wire Bus Line
 	6850 4550 6850 6000
 Wire Wire Line
@@ -1038,8 +1240,6 @@ Wire Wire Line
 	6500 5800 6750 5800
 Wire Wire Line
 	6500 5900 6750 5900
-Entry Bus Bus
-	5200 4450 5300 4550
 Wire Bus Line
 	5300 4550 5300 6000
 Wire Wire Line
@@ -1060,30 +1260,331 @@ Wire Wire Line
 	4850 3650 5400 3650
 Wire Wire Line
 	4850 3800 5400 3800
-Entry Wire Line
-	4750 3100 4850 3200
-Entry Wire Line
-	4750 3550 4850 3650
-Entry Wire Line
-	4750 3700 4850 3800
-Text Label 4850 3200 0    60   ~ 0
-MUXA
-Text Label 4850 3650 0    60   ~ 0
-MUXB
-Text Label 4850 3800 0    60   ~ 0
-MUXC
 Wire Wire Line
 	7150 3350 7700 3350
+Wire Wire Line
+	7150 3800 7700 3800
+Wire Wire Line
+	1550 6550 1550 6750
+Wire Wire Line
+	1550 6750 1700 6750
+Wire Wire Line
+	1700 6950 750  6950
+Wire Wire Line
+	750  6950 750  6900
+Wire Wire Line
+	1450 7000 1450 6950
+Connection ~ 1450 6950
+Wire Wire Line
+	750  6600 750  6550
+Wire Wire Line
+	2700 6550 2700 6600
+Connection ~ 1550 6550
+Wire Wire Line
+	2400 6850 2500 6850
+Wire Wire Line
+	2500 6850 2500 6900
+Wire Wire Line
+	2500 6900 2900 6900
+Connection ~ 2700 6900
+Connection ~ 2700 6550
+Wire Wire Line
+	750  6550 3200 6550
+Wire Wire Line
+	3200 6550 3200 6700
+Wire Wire Line
+	3200 7100 3200 7150
+Wire Wire Line
+	3200 7150 3850 7150
+Wire Wire Line
+	3850 7150 3850 6700
+Wire Wire Line
+	3850 6700 4000 6700
+Wire Wire Line
+	4000 6650 4000 6750
+Wire Wire Line
+	4000 7050 4000 7150
+Wire Wire Line
+	4000 7450 4000 7500
+Connection ~ 4000 7100
+Connection ~ 4000 6700
+Wire Wire Line
+	4000 7100 4550 7100
+Wire Bus Line
+	4650 6350 4650 7200
+Wire Wire Line
+	7150 3200 7700 3200
+Wire Wire Line
+	9550 2100 9700 2100
+Wire Wire Line
+	9550 850  9550 2100
+Wire Wire Line
+	11000 2200 11150 2200
+Wire Wire Line
+	11150 2200 11150 3100
+Wire Wire Line
+	11000 2300 11100 2300
+Wire Wire Line
+	11100 2300 11100 3000
+Wire Wire Line
+	7150 3050 7700 3050
+Wire Wire Line
+	7150 2900 7700 2900
+Wire Wire Line
+	11150 3100 8100 3100
+Wire Wire Line
+	8100 3100 8100 1100
+Wire Wire Line
+	8100 1100 8350 1100
+Wire Wire Line
+	11100 3000 8150 3000
+Wire Wire Line
+	8150 3000 8150 1300
+Wire Wire Line
+	8150 1300 8350 1300
+Wire Wire Line
+	8350 1200 8150 1200
+Wire Wire Line
+	8150 1200 8150 900 
+Wire Wire Line
+	8150 900  9550 900 
+Connection ~ 9550 900 
+Wire Wire Line
+	9250 1200 9350 1200
+Wire Wire Line
+	9350 1200 9350 850 
+Wire Wire Line
+	9250 2000 9300 2000
+Wire Wire Line
+	9250 1300 9350 1300
+Wire Wire Line
+	9350 1300 9350 2300
+Wire Wire Line
+	9350 2300 7900 2300
+Wire Wire Line
+	9250 1100 9450 1100
+Wire Wire Line
+	9450 1100 9450 2450
+Wire Wire Line
+	9450 2450 7900 2450
 Entry Wire Line
-	7700 3350 7800 3450
-Text Label 7500 3350 0    60   ~ 0
-MUX
-Text Notes 1000 650  0    60   ~ 0
-SENZORJI ZA ČRTO
-Text Notes 5850 950  0    60   ~ 0
-MIKROKONTROLER
-Text Notes 8900 3600 0    60   ~ 0
-DRIVER, ENKODERJA IN MOTORJA
-Text Notes 5800 5000 0    60   ~ 0
-MULTIPLEKSER
+	7800 2200 7900 2300
+Entry Wire Line
+	7800 2350 7900 2450
+Text Label 7900 2300 0    60   ~ 0
+BRX
+Text Label 7900 2450 0    60   ~ 0
+BTX
+Wire Wire Line
+	10100 2850 10100 2950
+Wire Wire Line
+	9600 2950 10600 2950
+Wire Wire Line
+	8350 2000 8250 2000
+Wire Wire Line
+	8250 2000 8250 2600
+Wire Wire Line
+	8250 2600 9600 2600
+Connection ~ 9300 2600
+Wire Wire Line
+	9150 2700 9150 2600
+Connection ~ 9150 2600
+$Comp
+L R 10kΩ
+U 1 1 58C7DB73
+P 5750 7100
+F 0 "10kΩ" V 5830 7100 50  0000 C CNN
+F 1 "R15" V 5750 7100 50  0000 C CNN
+F 2 "" V 5680 7100 50  0000 C CNN
+F 3 "" H 5750 7100 50  0000 C CNN
+	1    5750 7100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Tipka SW1
+U 1 1 58C7DDFE
+P 6100 7350
+F 0 "SW1" H 6100 7250 60  0000 C CNN
+F 1 "Tipka" H 6100 7600 60  0000 C CNN
+F 2 "" H 5900 7150 60  0001 C CNN
+F 3 "" H 5900 7150 60  0001 C CNN
+	1    6100 7350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6450 7350 6550 7350
+Wire Wire Line
+	6550 7350 6550 7450
+$Comp
+L GND #PWR?
+U 1 1 58C7E009
+P 6550 7450
+F 0 "#PWR?" H 6550 7200 50  0001 C CNN
+F 1 "GND" H 6550 7300 50  0000 C CNN
+F 2 "" H 6550 7450 50  0000 C CNN
+F 3 "" H 6550 7450 50  0000 C CNN
+	1    6550 7450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5750 7350 5750 7250
+Wire Wire Line
+	5750 6950 5750 6850
+$Comp
+L +5V #PWR?
+U 1 1 58C7E472
+P 5750 6850
+F 0 "#PWR?" H 5750 6700 50  0001 C CNN
+F 1 "+5V" H 5750 6990 50  0000 C CNN
+F 2 "" H 5750 6850 50  0000 C CNN
+F 3 "" H 5750 6850 50  0000 C CNN
+	1    5750 6850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5750 7300 5150 7300
+Wire Wire Line
+	5150 7300 5150 6950
+Wire Wire Line
+	5150 6950 4750 6950
+Connection ~ 5750 7300
+Entry Wire Line
+	4650 6850 4750 6950
+Text Label 4750 6950 0    60   ~ 0
+BUT
+Entry Wire Line
+	4750 2500 4850 2600
+Text Label 4850 2600 0    60   ~ 0
+BUT
+NoConn ~ 5400 1400
+NoConn ~ 5400 1550
+NoConn ~ 5400 2000
+NoConn ~ 5400 3050
+Wire Wire Line
+	5400 2600 4850 2600
+NoConn ~ 7150 1400
+NoConn ~ 7150 1550
+Wire Wire Line
+	7150 1850 7650 1850
+Wire Wire Line
+	7650 1850 7650 2050
+$Comp
+L GND #PWR?
+U 1 1 58C7FFD0
+P 7650 2050
+F 0 "#PWR?" H 7650 1800 50  0001 C CNN
+F 1 "GND" H 7650 1900 50  0000 C CNN
+F 2 "" H 7650 2050 50  0000 C CNN
+F 3 "" H 7650 2050 50  0000 C CNN
+	1    7650 2050
+	1    0    0    -1  
+$EndComp
+NoConn ~ 7150 2000
+Wire Wire Line
+	7450 2150 7450 1050
+$Comp
+L +5V #PWR?
+U 1 1 58C801B4
+P 7450 1050
+F 0 "#PWR?" H 7450 900 50  0001 C CNN
+F 1 "+5V" H 7450 1190 50  0000 C CNN
+F 2 "" H 7450 1050 50  0000 C CNN
+F 3 "" H 7450 1050 50  0000 C CNN
+	1    7450 1050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7150 3650 7250 3650
+Wire Wire Line
+	7250 3650 7250 1050
+Wire Wire Line
+	7150 2150 7450 2150
+$Comp
+L +3.3V #PWR?
+U 1 1 58C80E3A
+P 7250 1050
+F 0 "#PWR?" H 7250 900 50  0001 C CNN
+F 1 "+3.3V" H 7250 1190 50  0000 C CNN
+F 2 "" H 7250 1050 50  0000 C CNN
+F 3 "" H 7250 1050 50  0000 C CNN
+	1    7250 1050
+	1    0    0    -1  
+$EndComp
+NoConn ~ 7150 2450
+NoConn ~ 7150 2300
+NoConn ~ 7150 2600
+NoConn ~ 7150 2750
+NoConn ~ 7150 3500
+NoConn ~ 8350 1400
+NoConn ~ 8350 1500
+NoConn ~ 8350 1600
+NoConn ~ 8350 1700
+NoConn ~ 8350 1800
+NoConn ~ 8350 1900
+NoConn ~ 9250 1400
+NoConn ~ 9250 1500
+NoConn ~ 9250 1600
+NoConn ~ 9250 1700
+NoConn ~ 9250 1800
+NoConn ~ 9250 1900
+Wire Wire Line
+	11000 1100 11150 1100
+Wire Wire Line
+	11150 900  11150 1250
+Wire Wire Line
+	11000 900  11150 900 
+Connection ~ 11150 1100
+$Comp
+L GND #PWR?
+U 1 1 58C824B6
+P 11150 1250
+F 0 "#PWR?" H 11150 1000 50  0001 C CNN
+F 1 "GND" H 11150 1100 50  0000 C CNN
+F 2 "" H 11150 1250 50  0000 C CNN
+F 3 "" H 11150 1250 50  0000 C CNN
+	1    11150 1250
+	1    0    0    -1  
+$EndComp
+NoConn ~ 11000 1200
+NoConn ~ 11000 1300
+NoConn ~ 11000 1400
+NoConn ~ 11000 1500
+NoConn ~ 11000 1600
+NoConn ~ 11000 1700
+NoConn ~ 11000 1800
+NoConn ~ 11000 1900
+NoConn ~ 11000 2000
+NoConn ~ 11000 2100
+NoConn ~ 10700 2850
+NoConn ~ 10500 2850
+NoConn ~ 10400 2850
+NoConn ~ 10300 2850
+NoConn ~ 10200 2850
+NoConn ~ 10000 2850
+Wire Wire Line
+	10600 2950 10600 2850
+Connection ~ 10100 2950
+Wire Wire Line
+	9700 1100 9600 1100
+Wire Wire Line
+	9600 1100 9600 2950
+Wire Wire Line
+	9600 2200 9700 2200
+Connection ~ 9600 2200
+Connection ~ 9600 2600
+Wire Wire Line
+	9300 2000 9300 2600
+NoConn ~ 9700 1200
+NoConn ~ 9700 1300
+NoConn ~ 9700 1400
+NoConn ~ 9700 1500
+NoConn ~ 9700 1600
+NoConn ~ 9700 1700
+NoConn ~ 9700 1800
+NoConn ~ 9700 1900
+NoConn ~ 9700 2000
+Text Notes 2150 6450 0    60   ~ 0
+NAPAJANJE
+Text Notes 6000 6700 0    60   ~ 0
+TIPKA
 $EndSCHEMATC
