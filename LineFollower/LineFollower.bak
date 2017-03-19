@@ -46,10 +46,10 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Arduino_MICRO ARD?
+L Arduino_MICRO ARD1
 U 1 1 58BCA006
 P 6300 2550
-F 0 "ARD?" H 6300 3700 60  0000 C CNN
+F 0 "ARD1" H 6300 3700 60  0000 C CNN
 F 1 "Arduino_MICRO" H 6250 3950 60  0000 C CNN
 F 2 "" H 6050 2450 60  0001 C CNN
 F 3 "" H 6050 2450 60  0001 C CNN
@@ -779,17 +779,6 @@ Entry Wire Line
 Text Label 7550 3200 0    60   ~ 0
 BAT
 $Comp
-L RN42-(Bluetooth_module) BTM1
-U 1 1 58C75ACA
-P 10350 1700
-F 0 "BTM1" H 10350 2450 60  0000 C CNN
-F 1 "RN42-(Bluetooth_module)" H 10350 2700 60  0000 C CNN
-F 2 "" H 10300 1150 60  0001 C CNN
-F 3 "http://si.farnell.com/microchip/rn42-i-rm/module-bluetooth-class-2-w-ant/dp/2143310" H 10350 2850 60  0001 C CNN
-	1    10350 1700
-	1    0    0    -1  
-$EndComp
-$Comp
 L TXB0108PWR-(Voltage_level_translator) VLT1
 U 1 1 58C76B2F
 P 8800 1450
@@ -1315,17 +1304,7 @@ Wire Bus Line
 Wire Wire Line
 	7150 3200 7700 3200
 Wire Wire Line
-	9550 2100 9700 2100
-Wire Wire Line
-	9550 850  9550 2100
-Wire Wire Line
-	11000 2200 11150 2200
-Wire Wire Line
-	11150 2200 11150 3100
-Wire Wire Line
-	11000 2300 11100 2300
-Wire Wire Line
-	11100 2300 11100 3000
+	9550 850  9550 2150
 Wire Wire Line
 	7150 3050 7700 3050
 Wire Wire Line
@@ -1375,10 +1354,6 @@ Text Label 7900 2300 0    60   ~ 0
 BRX
 Text Label 7900 2450 0    60   ~ 0
 BTX
-Wire Wire Line
-	10100 2850 10100 2950
-Wire Wire Line
-	9600 2950 10600 2950
 Wire Wire Line
 	8350 2000 8250 2000
 Wire Wire Line
@@ -1527,64 +1502,73 @@ NoConn ~ 9250 1600
 NoConn ~ 9250 1700
 NoConn ~ 9250 1800
 NoConn ~ 9250 1900
-Wire Wire Line
-	11000 1100 11150 1100
-Wire Wire Line
-	11150 900  11150 1250
-Wire Wire Line
-	11000 900  11150 900 
-Connection ~ 11150 1100
-$Comp
-L GND #PWR?
-U 1 1 58C824B6
-P 11150 1250
-F 0 "#PWR?" H 11150 1000 50  0001 C CNN
-F 1 "GND" H 11150 1100 50  0000 C CNN
-F 2 "" H 11150 1250 50  0000 C CNN
-F 3 "" H 11150 1250 50  0000 C CNN
-	1    11150 1250
-	1    0    0    -1  
-$EndComp
-NoConn ~ 11000 1200
-NoConn ~ 11000 1300
-NoConn ~ 11000 1400
-NoConn ~ 11000 1500
-NoConn ~ 11000 1600
-NoConn ~ 11000 1700
-NoConn ~ 11000 1800
-NoConn ~ 11000 1900
-NoConn ~ 11000 2000
-NoConn ~ 11000 2100
-NoConn ~ 10700 2850
-NoConn ~ 10500 2850
-NoConn ~ 10400 2850
-NoConn ~ 10300 2850
-NoConn ~ 10200 2850
-NoConn ~ 10000 2850
-Wire Wire Line
-	10600 2950 10600 2850
-Connection ~ 10100 2950
-Wire Wire Line
-	9700 1100 9600 1100
-Wire Wire Line
-	9600 1100 9600 2950
-Wire Wire Line
-	9600 2200 9700 2200
-Connection ~ 9600 2200
 Connection ~ 9600 2600
 Wire Wire Line
 	9300 2000 9300 2600
-NoConn ~ 9700 1200
-NoConn ~ 9700 1300
-NoConn ~ 9700 1400
-NoConn ~ 9700 1500
-NoConn ~ 9700 1600
-NoConn ~ 9700 1700
-NoConn ~ 9700 1800
-NoConn ~ 9700 1900
-NoConn ~ 9700 2000
 Text Notes 2150 6450 0    60   ~ 0
 NAPAJANJE
 Text Notes 6000 6700 0    60   ~ 0
 TIPKA
+$Comp
+L RN42-(Bluetooth_module) BTM1
+U 1 1 58C894F2
+P 10400 1850
+F 0 "BTM1" H 10400 2650 60  0000 C CNN
+F 1 "RN42-(Bluetooth_module)" H 10400 2850 60  0000 C CNN
+F 2 "" H 10350 1500 60  0001 C CNN
+F 3 "http://si.farnell.com/microchip/rn42-i-rm/module-bluetooth-class-2-w-ant/dp/2143310" H 10400 3000 60  0001 C CNN
+	1    10400 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10650 2800 10650 2950
+Wire Wire Line
+	10650 2950 9600 2950
+Wire Wire Line
+	9600 2950 9600 1150
+Wire Wire Line
+	10150 2800 10150 2950
+Connection ~ 10150 2950
+Wire Wire Line
+	9600 2250 9750 2250
+Wire Wire Line
+	9600 1150 9750 1150
+Connection ~ 9600 2250
+Wire Wire Line
+	11150 3100 11150 2150
+Wire Wire Line
+	11150 2150 11050 2150
+Wire Wire Line
+	11100 3000 11100 2250
+Wire Wire Line
+	11100 2250 11050 2250
+Wire Wire Line
+	9550 2150 9750 2150
+NoConn ~ 11050 2050
+NoConn ~ 11050 1950
+NoConn ~ 11050 1850
+NoConn ~ 11050 1750
+NoConn ~ 11050 1650
+NoConn ~ 11050 1550
+NoConn ~ 11050 1450
+NoConn ~ 11050 1350
+NoConn ~ 11050 1250
+NoConn ~ 11050 1150
+NoConn ~ 9750 2050
+NoConn ~ 9750 1950
+NoConn ~ 9750 1850
+NoConn ~ 9750 1750
+NoConn ~ 9750 1650
+NoConn ~ 9750 1550
+NoConn ~ 9750 1450
+NoConn ~ 9750 1350
+NoConn ~ 9750 1250
+NoConn ~ 10750 2800
+NoConn ~ 10550 2800
+NoConn ~ 10450 2800
+NoConn ~ 10350 2800
+NoConn ~ 10250 2800
+NoConn ~ 10050 2800
+Text Notes 9950 700  0    60   ~ 0
+BLUETOOTH
 $EndSCHEMATC

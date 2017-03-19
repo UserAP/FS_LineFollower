@@ -779,28 +779,6 @@ Entry Wire Line
 Text Label 7550 3200 0    60   ~ 0
 BAT
 $Comp
-L TXB0108PWR-(Voltage_level_translator) VLT1
-U 1 1 58C76B2F
-P 8800 1450
-F 0 "VLT1" H 8800 1900 60  0000 C CNN
-F 1 "TXB0108PWR-(Voltage_level_translator)" H 8800 2300 60  0000 C CNN
-F 2 "" H 8850 850 60  0001 C CNN
-F 3 "http://si.farnell.com/texas-instruments/txb0108pwr/ic-translator-8bit-bidirectional/dp/1494945" H 8800 2200 60  0001 C CNN
-	1    8800 1450
-	1    0    0    -1  
-$EndComp
-$Comp
-L GND #PWR?
-U 1 1 58C77F0E
-P 9150 2700
-F 0 "#PWR?" H 9150 2450 50  0001 C CNN
-F 1 "GND" H 9150 2550 50  0000 C CNN
-F 2 "" H 9150 2700 50  0000 C CNN
-F 3 "" H 9150 2700 50  0000 C CNN
-	1    9150 2700
-	1    0    0    -1  
-$EndComp
-$Comp
 L +3.3V #PWR?
 U 1 1 58C78C35
 P 9550 850
@@ -819,17 +797,6 @@ Text Label 7550 3050 0    60   ~ 0
 BTX
 Text Label 7550 2900 0    60   ~ 0
 BRX
-$Comp
-L +5V #PWR?
-U 1 1 58C7BF38
-P 9350 850
-F 0 "#PWR?" H 9350 700 50  0001 C CNN
-F 1 "+5V" H 9350 990 50  0000 C CNN
-F 2 "" H 9350 850 50  0000 C CNN
-F 3 "" H 9350 850 50  0000 C CNN
-	1    9350 850 
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	8350 5200 8600 5200
 Wire Wire Line
@@ -1309,61 +1276,14 @@ Wire Wire Line
 	7150 3050 7700 3050
 Wire Wire Line
 	7150 2900 7700 2900
-Wire Wire Line
-	11150 3100 8100 3100
-Wire Wire Line
-	8100 3100 8100 1100
-Wire Wire Line
-	8100 1100 8350 1100
-Wire Wire Line
-	11100 3000 8150 3000
-Wire Wire Line
-	8150 3000 8150 1300
-Wire Wire Line
-	8150 1300 8350 1300
-Wire Wire Line
-	8350 1200 8150 1200
-Wire Wire Line
-	8150 1200 8150 900 
-Wire Wire Line
-	8150 900  9550 900 
-Connection ~ 9550 900 
-Wire Wire Line
-	9250 1200 9350 1200
-Wire Wire Line
-	9350 1200 9350 850 
-Wire Wire Line
-	9250 2000 9300 2000
-Wire Wire Line
-	9250 1300 9350 1300
-Wire Wire Line
-	9350 1300 9350 2300
-Wire Wire Line
-	9350 2300 7900 2300
-Wire Wire Line
-	9250 1100 9450 1100
-Wire Wire Line
-	9450 1100 9450 2450
-Wire Wire Line
-	9450 2450 7900 2450
 Entry Wire Line
-	7800 2200 7900 2300
+	7800 850  7900 950 
 Entry Wire Line
-	7800 2350 7900 2450
-Text Label 7900 2300 0    60   ~ 0
+	7800 1000 7900 1100
+Text Label 7900 950  0    60   ~ 0
 BRX
-Text Label 7900 2450 0    60   ~ 0
+Text Label 7900 1100 0    60   ~ 0
 BTX
-Wire Wire Line
-	8350 2000 8250 2000
-Wire Wire Line
-	8250 2000 8250 2600
-Wire Wire Line
-	8250 2600 9600 2600
-Connection ~ 9300 2600
-Wire Wire Line
-	9150 2700 9150 2600
-Connection ~ 9150 2600
 $Comp
 L R 10kΩ
 U 1 1 58C7DB73
@@ -1490,21 +1410,7 @@ NoConn ~ 7150 2300
 NoConn ~ 7150 2600
 NoConn ~ 7150 2750
 NoConn ~ 7150 3500
-NoConn ~ 8350 1400
-NoConn ~ 8350 1500
-NoConn ~ 8350 1600
-NoConn ~ 8350 1700
-NoConn ~ 8350 1800
-NoConn ~ 8350 1900
-NoConn ~ 9250 1400
-NoConn ~ 9250 1500
-NoConn ~ 9250 1600
-NoConn ~ 9250 1700
-NoConn ~ 9250 1800
-NoConn ~ 9250 1900
 Connection ~ 9600 2600
-Wire Wire Line
-	9300 2000 9300 2600
 Text Notes 2150 6450 0    60   ~ 0
 NAPAJANJE
 Text Notes 6000 6700 0    60   ~ 0
@@ -1539,7 +1445,7 @@ Wire Wire Line
 Wire Wire Line
 	11150 2150 11050 2150
 Wire Wire Line
-	11100 3000 11100 2250
+	11100 2250 11100 3050
 Wire Wire Line
 	11100 2250 11050 2250
 Wire Wire Line
@@ -1571,4 +1477,146 @@ NoConn ~ 10250 2800
 NoConn ~ 10050 2800
 Text Notes 9950 700  0    60   ~ 0
 BLUETOOTH
+$Comp
+L BSS138 Q1
+U 1 1 58CE6610
+P 8650 1500
+F 0 "Q1" H 8850 1575 50  0000 L CNN
+F 1 "BSS138" H 8850 1500 50  0000 L CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23" H 8850 1425 50  0001 L CIN
+F 3 "" H 8650 1500 50  0000 L CNN
+	1    8650 1500
+	0    1    1    0   
+$EndComp
+$Comp
+L BSS138 Q2
+U 1 1 58CE6CBE
+P 8650 2450
+F 0 "Q2" H 8850 2525 50  0000 L CNN
+F 1 "BSS138" H 8850 2450 50  0000 L CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23" H 8850 2375 50  0001 L CIN
+F 3 "" H 8650 2450 50  0000 L CNN
+	1    8650 2450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7900 950  9050 950 
+Wire Wire Line
+	8250 2100 9550 2100
+Connection ~ 9550 2100
+Wire Wire Line
+	8600 1300 8600 1200
+Wire Wire Line
+	8250 1200 9550 1200
+Connection ~ 9550 1200
+Wire Wire Line
+	7900 1100 9000 1100
+Wire Wire Line
+	9000 1100 9000 1600
+Wire Wire Line
+	8450 1600 8050 1600
+Wire Wire Line
+	8050 1600 8050 3100
+Wire Wire Line
+	8050 3100 11150 3100
+Wire Wire Line
+	11100 3050 8100 3050
+Wire Wire Line
+	8100 3050 8100 2550
+Wire Wire Line
+	8100 2550 8450 2550
+Wire Wire Line
+	8600 2250 8600 2100
+Wire Wire Line
+	8850 2550 9150 2550
+Wire Wire Line
+	9050 950  9050 2550
+$Comp
+L R 10kΩ
+U 1 1 58CF09EC
+P 9150 1400
+F 0 "10kΩ" V 9230 1400 50  0000 C CNN
+F 1 "R16" V 9150 1400 50  0000 C CNN
+F 2 "" V 9080 1400 50  0000 C CNN
+F 3 "" H 9150 1400 50  0000 C CNN
+	1    9150 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L R 10kΩ
+U 1 1 58CF0A7B
+P 9150 2350
+F 0 "10kΩ" V 9230 2350 50  0000 C CNN
+F 1 "R17" V 9150 2350 50  0000 C CNN
+F 2 "" V 9080 2350 50  0000 C CNN
+F 3 "" H 9150 2350 50  0000 C CNN
+	1    9150 2350
+	1    0    0    -1  
+$EndComp
+Connection ~ 9000 1600
+$Comp
+L +5V #PWR?
+U 1 1 58C7BF38
+P 9300 850
+F 0 "#PWR?" H 9300 700 50  0001 C CNN
+F 1 "+5V" H 9300 990 50  0000 C CNN
+F 2 "" H 9300 850 50  0000 C CNN
+F 3 "" H 9300 850 50  0000 C CNN
+	1    9300 850 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8850 1600 9150 1600
+Wire Wire Line
+	9150 1600 9150 1550
+Wire Wire Line
+	9150 1250 9150 950 
+Wire Wire Line
+	9150 950  9300 950 
+Wire Wire Line
+	9300 850  9300 2150
+Wire Wire Line
+	9300 2150 9150 2150
+Wire Wire Line
+	9150 2150 9150 2200
+Connection ~ 9300 950 
+Wire Wire Line
+	9150 2550 9150 2500
+Connection ~ 9050 2550
+$Comp
+L R 10kΩ
+U 1 1 58CF6830
+P 8250 1400
+F 0 "10kΩ" V 8330 1400 50  0000 C CNN
+F 1 "R18" V 8250 1400 50  0000 C CNN
+F 2 "" V 8180 1400 50  0000 C CNN
+F 3 "" H 8250 1400 50  0000 C CNN
+	1    8250 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L R 10kΩ
+U 1 1 58CF68D1
+P 8250 2350
+F 0 "10kΩ" V 8330 2350 50  0000 C CNN
+F 1 "R19" V 8250 2350 50  0000 C CNN
+F 2 "" V 8180 2350 50  0000 C CNN
+F 3 "" H 8250 2350 50  0000 C CNN
+	1    8250 2350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8250 1200 8250 1250
+Connection ~ 8600 1200
+Wire Wire Line
+	8250 1550 8250 1600
+Connection ~ 8250 1600
+Wire Wire Line
+	8250 2100 8250 2200
+Connection ~ 8600 2100
+Wire Wire Line
+	8250 2500 8250 2550
+Connection ~ 8250 2550
+Text Notes 8350 700  0    60   ~ 0
+LEVEL SHIFTER
 $EndSCHEMATC
